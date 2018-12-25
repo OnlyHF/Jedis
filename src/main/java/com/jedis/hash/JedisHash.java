@@ -14,7 +14,7 @@ public class JedisHash {
 
 	public static void main(String[] args) {
 		Jedis jedis = new Jedis(JedisUtils.IP, JedisUtils.PORT);
-		Map<String, String> hash = new HashMap<>();
+		Map<String, String> hash = new HashMap<String, String>();
 		hash.put("name", "zhangsan");
 		hash.put("sex", "male");
 		hash.put("age", "24");
