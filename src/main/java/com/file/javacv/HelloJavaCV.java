@@ -26,10 +26,15 @@ public class HelloJavaCV {
 	public static void main(String[] args) throws Exception {
 		System.out.println(System.getProperty("java.library.path"));
 		try {
+			long startTime = System.currentTimeMillis();
+			System.out.println(startTime);
 			SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMddhhmmss");
 			String videoFilePath = "/Users/qianzhubing/Downloads/video/20181231.avi";
-			String imgFilePath = "/Users/qianzhubing/Downloads/photo" + sdf.format(new Date());
+//			String videoFilePath = "/Users/qianzhubing/Downloads/video/20181227.mp4";
+			String imgFilePath = "/Users/qianzhubing/Downloads/photo/" + sdf.format(new Date()) + ".jpg";
 			fetchFrame(videoFilePath, imgFilePath);
+			long endTime = System.currentTimeMillis();
+			System.out.println("耗时： " + (endTime - startTime));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
